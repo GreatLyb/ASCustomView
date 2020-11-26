@@ -7,4 +7,29 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <declare-styleable name="RingProgressBar_style">
+        <!--        背景宽度-->
+        <attr name="barBackgroundWidth" format="dimension" />
+        <!--        进度条宽度-->
+        <attr name="barProgressWidth" format="dimension" />
+        <!--        进度条背景色-->
+        <attr name="barBackgroundColor" format="color" />
+        <!--        进度条进度的颜色-->
+        <attr name="barColor" format="color" />
+        <!--        当前进度-->
+        <attr name="progress" format="float" />
+        <!--        进度文本颜色-->
+        <attr name="progress_text_color" format="color" />
+        <!--        进度文本字体大小-->
+        <attr name="progress_text_size" format="dimension" />
+        <!--        是否启用动画 默认不启动-->
+        <attr name="EnableAnimation" format="boolean" />
+        <!--        动画时长毫秒   默认2000毫秒-->
+        <attr name="durationTime" format="integer" />
+        <!--        是否显示进度文字 默认不显示-->
+        <attr name="isShowText" format="boolean" />
+
+
+    </declare-styleable>
+
 </resources>
