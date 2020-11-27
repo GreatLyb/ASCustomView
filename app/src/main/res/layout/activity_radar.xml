@@ -11,8 +11,8 @@
         android:layout_width="match_parent"
         app:rippleColor="@color/colorPrimaryDark"
         app:rippleType="1"
-        app:ScaleXStart="1"
-        app:ScaleYEnd="3"
+        app:rippleAmount="10"
+        app:rippleDurationTime="3000"
         android:layout_height="match_parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

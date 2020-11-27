@@ -9,6 +9,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.widget.RelativeLayout;
@@ -29,7 +30,7 @@ import androidx.annotation.Nullable;
  * @Author： Lyb
  */
 public class RadarView extends RelativeLayout {
-
+    private static final String TAG = "Lyb";
     /**
      * 涟漪从开始到结束的动画持续时间
      */
@@ -104,8 +105,8 @@ public class RadarView extends RelativeLayout {
     public RadarView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.RadarView_style);
-        rippleDurationTime = typedArray.getInteger(R.styleable.RadarView_style_rippleAmount, 3000);
-        rippleAmount = typedArray.getInteger(R.styleable.RadarView_style_rippleAmount, 3);
+        rippleDurationTime = typedArray.getInteger(R.styleable.RadarView_style_rippleDurationTime, 3000);
+        rippleAmount = typedArray.getInteger(R.styleable.RadarView_style_rippleAmount, 4);
         rippleType = typedArray.getInteger(R.styleable.RadarView_style_rippleType, 1);
         rippleRadius = typedArray.getInteger(R.styleable.RadarView_style_rippleRadius, 50);
         rippleColor = typedArray.getColor(R.styleable.RadarView_style_rippleColor, Color.RED);
@@ -160,7 +161,9 @@ public class RadarView extends RelativeLayout {
             animatorList.add(objectAnimatorY);
             animatorList.add(objectAnimator);
         }
+
         animatorSet.setDuration(rippleDurationTime);
+        Log.i(TAG, "rippleDurationTime: "+rippleDurationTime);
         animatorSet.setInterpolator(new AccelerateDecelerateInterpolator());
         animatorSet.playTogether(animatorList);
     }
