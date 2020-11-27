@@ -110,14 +110,15 @@ public class RingProgressBar extends View {
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-        //计算大小
+        //计算View宽度
         int widthSize = getMeasuredWidth() - getPaddingLeft() - getPaddingRight();
+        //计算View高度
         int heightSize = getMeasuredHeight() - getPaddingTop() - getPaddingBottom();
-        //矩形的宽度
+        //矩形的宽度 因为圆形是RectF这个矩形的内切圆 所以矩形的宽度不能和view的宽度一样宽，那样的话 加上圆环本身的线条宽度 势必会在矩形的四个中点位置显示不完全 所以要减去一个圆环本身的宽度 这里估计又有人该问了，为啥是减去一个圆环本身的宽度而不是两个 因为如果一个圆环的宽度是4 那么在圆环绘制在矩形之中，那么圆环与矩形相交的四个顶点 每一个顶点的位置刚好是在 4的中间 2的位置 所以圆环左右2个顶点会各会有一半越过矩形的边框 同理上下也是，所以我们只需要减去一个圆环的宽度就够了,如果这个时候我们的矩形宽度和view本身的一样  那么这四个顶点就会被切割显示不全，所以这里是这样计算的
         int mRectLength = (int) (Math.max(widthSize, heightSize) - Math.max(backgroundPaint.getStrokeWidth(), progressPaint.getStrokeWidth()));
-        //左顶点的坐标
+        //左顶点的位置  widthSize - mRectLength 是一个圆环的宽度 除以2 半个圆环的宽度 刚好能把圆环显示出来
         int leftPoint = getPaddingLeft() + (widthSize - mRectLength) / 2;
-        //左上角
+        //左上角 同以上道理
         int rightPoint = getPaddingTop() + (widthSize - mRectLength) / 2;
         mRectF = new RectF(leftPoint, rightPoint, leftPoint + mRectLength, rightPoint + mRectLength);
     }

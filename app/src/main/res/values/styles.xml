@@ -6,7 +6,7 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
-
+    <!--        圆环进度条-->
     <declare-styleable name="RingProgressBar_style">
         <!--        背景宽度-->
         <attr name="barBackgroundWidth" format="dimension" />
@@ -28,6 +28,34 @@
         <attr name="durationTime" format="integer" />
         <!--        是否显示进度文字 默认不显示-->
         <attr name="isShowText" format="boolean" />
+
+
+    </declare-styleable>
+
+    <!--        雷达view-->
+    <declare-styleable name="RadarView_style">
+
+        <!--        涟漪从开始到结束的动画持续时间 毫秒-->
+        <attr name="rippleDurationTime" format="integer" />
+        <!--        涟漪的数量 -->
+        <attr name="rippleAmount" format="integer" />
+        <!--        涟漪的类型 1. 填充 2.边框-->
+        <attr name="rippleType" format="integer" />
+        <!--        涟漪的半径 -->
+        <attr name="rippleRadius" format="float" />
+
+        <!--        涟漪的颜色 -->
+        <attr name="rippleColor" format="color" />
+        <!--        涟漪的透明度区间 默认 1->0 -->
+        <attr name="rippleAlphaStart" format="float" />
+        <attr name="rippleAlphaEnd" format="float" />
+        <!--        涟漪的X轴缩放的区间  默认 1-7 -->
+        <attr name="ScaleXStart" format="float" />
+        <attr name="ScaleXEnd" format="float" />
+
+      <!--        涟漪的Y轴缩放的区间 默认 1-7 -->
+        <attr name="ScaleYStart" format="float" />
+        <attr name="ScaleYEnd" format="float" />
 
 
     </declare-styleable>
