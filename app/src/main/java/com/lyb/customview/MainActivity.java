@@ -1,13 +1,14 @@
 package com.lyb.customview;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.LinearLayout;
 
 import com.lyb.customview.touchview.DrawOwnView;
+import com.lyb.customview.ui.RadarActivity;
+import com.lyb.customview.ui.RingProgressBarActivity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -21,23 +22,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         linearLayout=findViewById(R.id.llayout_root);
-        drawOwnView=findViewById(R.id.draw_d);
-        linearLayout.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
+    }
 
-                if (event.getAction()==MotionEvent.ACTION_MOVE){
-                    //移动事件
-                    //            RectF rectF=new RectF();
-                    float x = event.getX();
-                    float y = event.getY();
-                    Log.i(TAG, "x== "+x);
-                    Log.i(TAG, "y== "+y);
-                    drawOwnView.setCenterXY(x,y);
-                }
-                return true;
-//                return false;
-            }
-        });
+    public void RadarView(View view) {
+        startActivity(new Intent(this, RadarActivity.class ));
+    }
+
+    public void RingBar(View view) {
+        startActivity(new Intent(this, RingProgressBarActivity.class ));
     }
 }

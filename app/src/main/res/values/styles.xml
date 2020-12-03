@@ -56,7 +56,26 @@
       <!--        涟漪的Y轴缩放的区间 默认 1-7 -->
         <attr name="ScaleYStart" format="float" />
         <attr name="ScaleYEnd" format="float" />
+    </declare-styleable>
 
+    <declare-styleable name="RadarViewPro_style">
+
+        <!--        涟漪从开始到结束的动画持续时间 毫秒-->
+        <attr name="rippleDurationTimePro" format="integer" />
+        <!--        涟漪的数量 -->
+        <attr name="rippleAmountPro" format="integer" />
+        <!--        涟漪的类型 1. 填充 2.边框-->
+        <attr name="rippleTypePro" format="integer" />
+        <!--        涟漪的半径 -->
+        <attr name="rippleRadiusPro" format="float" />
+
+        <!--        涟漪的颜色  倍数-->
+        <attr name="rippleColorPro" format="color" />
+        <!--        涟漪的透明度区间 默认 1->0 -->
+        <attr name="rippleAlphaStartPro" format="float" />
+        <attr name="rippleAlphaEndPro" format="float" />
+        <!--        涟漪的放大倍数 默认 3 倍 -->
+        <attr name="ScaleMultiple" format="float" />
 
     </declare-styleable>
 
