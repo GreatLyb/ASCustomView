@@ -5,14 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.RadarActivity">
+    tools:context=".ui.RadarScanActivity">
 
-    <com.lyb.customview.RadarView.RadarViewPro
-        android:id="@+id/radar_view"
+    <com.lyb.customview.RadarView.RadarScanningView
+        android:id="@+id/radar_scan_view"
         android:layout_width="match_parent"
         android:layout_height="500dp"
+        android:layout_gravity="center"
         app:ScaleMultiple="3"
         app:rippleAmountPro="5"
+        android:layout_marginTop="50dp"
         app:rippleColorPro="@color/colorPrimaryDark"
         app:rippleDurationTimePro="3000"
         app:rippleRadiusPro="50"
@@ -22,6 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:layout_marginTop="50dp"
         android:orientation="horizontal">
 
         <Button
@@ -36,17 +39,6 @@
             android:onClick="stopRipple"
             android:text="停止" />
 
-        <Button
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:onClick="pauseRipple"
-            android:text="暂停" />
-
-        <Button
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:onClick="reStartRipple"
-            android:text="继续" />
 
     </LinearLayout>
 

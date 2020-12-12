@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ui.TaiJiActivity"></activity>
         <activity
             android:name=".ui.RadarActivity"
             android:label="雷达涟漪" />
@@ -16,10 +17,14 @@
             android:name=".ui.RingProgressBarActivity"
             android:label="圆环进度条" />
         <activity
+            android:name=".ui.RadarScanActivity"
+            android:label="雷达扫描" />
+        <activity
             android:name=".MainActivity"
             android:label="首页">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

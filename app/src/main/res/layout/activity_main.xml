@@ -6,11 +6,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
+    android:background="#e3e3e3"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <com.lyb.customview.touchview.DrawOwnView
-        android:id="@+id/draw_d"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:onClick="RingBar"
+        android:text="圆环进度条" />
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:onClick="RadarView"
+        android:text="雷达涟漪" />
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:onClick="RadarScanView"
+        android:text="雷达扫描" />
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:onClick="TaiJiView"
+        android:text="太极旋转图" />
+
 </LinearLayout>

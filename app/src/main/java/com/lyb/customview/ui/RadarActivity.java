@@ -1,6 +1,8 @@
 package com.lyb.customview.ui;
 
 import android.os.Bundle;
+import android.os.CountDownTimer;
+import android.util.Log;
 import android.view.View;
 
 import com.lyb.customview.R;
@@ -10,13 +12,25 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class RadarActivity extends AppCompatActivity {
     RadarView radarView;
+    private CountDownTimer countDownTimer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_radar);
 //        radarView = findViewById(R.id.radar_view);
+        countDownTimer = new CountDownTimer(300 * 1000, 1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                Log.i("Lyb","onTick=="+millisUntilFinished);
+            }
 
+            @Override
+            public void onFinish() {
+                Log.i("Lyb","onFinish==");
+
+            }
+        }.start();
     }
 
     /**
@@ -34,6 +48,22 @@ public class RadarActivity extends AppCompatActivity {
 
     public void pauseRipple(View view) {
         radarView.pauseRippleAnimation();
+
+    }
+
+    @Override
+    public void finish() {
+        Log.i("Lyb","finish==");
+        if (countDownTimer!=null){
+            Log.i("Lyb","finishtDownTimer==");
+            countDownTimer.cancel();
+        }
+        super.finish();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
 
     }
 
