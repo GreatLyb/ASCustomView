@@ -19,7 +19,8 @@ public class RadarActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_radar);
 //        radarView = findViewById(R.id.radar_view);
-        //---------------------------dev_1.0.1
+        //---------------------------dev_1.0.1--
+        //---------------------------local_1.0.2
         countDownTimer = new CountDownTimer(300 * 1000, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
