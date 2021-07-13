@@ -1,4 +1,4 @@
-package com.lyb.customview.ui;
+package com.lyb.customview.touchview;
 
 import android.os.Bundle;
 import android.os.CountDownTimer;

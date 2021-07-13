@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
 
-import com.lyb.customview.ui.RadarActivity;
+import com.lyb.customview.touchview.RadarActivity;
 import com.lyb.customview.ui.RadarScanActivity;
 import com.lyb.customview.ui.RingProgressBarActivity;
 import com.lyb.customview.ui.TaiJiActivity;

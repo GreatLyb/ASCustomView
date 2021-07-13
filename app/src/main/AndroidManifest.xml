@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".ui.TaiJiActivity"></activity>
         <activity
-            android:name=".ui.RadarActivity"
+            android:name=".touchview.RadarActivity"
             android:label="雷达涟漪" />
         <activity
             android:name=".ui.RingProgressBarActivity"
