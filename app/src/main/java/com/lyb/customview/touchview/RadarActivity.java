@@ -18,6 +18,7 @@ public class RadarActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_radar);
+        //dev 改动
 //        radarView = findViewById(R.id.radar_view);
         //---------------------------dev_1.0.1--
         //---------------------------local_1.0.2
