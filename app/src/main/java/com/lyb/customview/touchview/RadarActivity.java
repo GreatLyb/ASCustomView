@@ -17,6 +17,7 @@ public class RadarActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //修改了文件
         setContentView(R.layout.activity_radar);
 //        radarView = findViewById(R.id.radar_view);
         //---------------------------dev_1.0.1--
